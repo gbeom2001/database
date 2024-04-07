@@ -1,11 +1,11 @@
 FLAGS = -Werror -std=c++11
 
 main.exe : main.o database.h
-	g++ -o main.exe main.o
+	g++ $(FLAGS) -o main.exe main.o
 
 main.o: main.cpp database.h
-	g++ ${FLAGS} -c main.cpp
+	g++ $(FLAGS) -c main.cpp
 
 clean:
-	rm *.o
-	rm main
+	rm -f *.o
+	rm -f main.exe
